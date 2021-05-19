@@ -22,16 +22,16 @@ def database():
     os.system("sqlmap "+ "-u "+url+" --dbs") # for show database's
 def tables():
     d_name = raw_input("Enter a database name: ")
-    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" --tables")
+    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" --tables")  # for show table
 def col():
     d_name = raw_input("Enter a database name: ")
     t_nmae = raw_input("Enter a tables name: ")
-    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" -T"+ t_nmae +" --column")
+    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" -T"+ t_nmae +" --column")  # for show column
 def col_dump():
     d_name = raw_input("Enter a database name: ")
     t_nmae = raw_input("Enter a tables name: ")
     c_name = raw_input("Enter a column name: ")
-    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" -T"+ t_nmae +" -C"+ c_name +" --dump")
+    os.system("sqlmap "+ "-u "+url+" -D "+ d_name +" -T"+ t_nmae +" -C"+ c_name +" --dump")   # for dump data
 def a_dump():
     os.system("sqlmap "+ "-u "+url+" --dump")
 
