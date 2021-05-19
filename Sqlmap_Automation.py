@@ -1,5 +1,5 @@
 #! /bin/env python
-import os
+import os  # import a os module
 
 os.system("clear") #clear screen
 print("""
@@ -17,7 +17,7 @@ print("""
     6. exit
     """)
 
-url = raw_input("Enter a sql_url: ") # for sql url
+url = raw_input("Enter a sql_url: ") # for user input 
 def database():
     os.system("sqlmap "+ "-u "+url+" --dbs") # for show database's
 def tables():
